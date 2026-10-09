@@ -73,14 +73,14 @@ function App(){
       <form onSubmit={handleSubmit}>
         <input type="text" required placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} 
           onKeyPress = {(e) => {
-            const isLetter = /[a-zA-Z]/.test(e.key);
+            const isLetter = /^[a-zA-Z\s]$/.test(e.key);
             if (!isLetter) {
               e.preventDefault();
             } 
           }}/>
         <input type="text" required placeholder="Course" value={course} onChange={(e) => setCourse(e.target.value)} 
           onKeyPress = {(e) => {
-            const isLetter = /[a-zA-Z]/.test(e.key);
+            const isLetter = /^[a-zA-Z\s]$/.test(e.key);
             if (!isLetter) {
               e.preventDefault();
             } 
